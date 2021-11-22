@@ -42,6 +42,7 @@ def login(client_socket):
                     if data == '1':
                         inserir(authentication, client_socket)
                     elif data == '2':
+                        print('Invocando ler')
                         ler(authentication, client_socket)
                     elif data == '3':
                         atualizar(authentication,client_socket)
@@ -129,7 +130,7 @@ def apagar(authentication, client_socket):
             print(pure)
             _id = int(pure)
             ControllerTable.apagar(_id)
-            client_socket.send('voltando ao menu principal\n'.encode())
+
     else:
         print('O usuario nao esta autenticado')
 

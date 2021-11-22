@@ -92,6 +92,7 @@ def ler(menu, s):
     if menu == '2':
         s.send('2'.encode())
         data = s.recv(4096)
+
         data_variable = pickle.loads(data)
 
         printresult(data_variable)
@@ -117,7 +118,7 @@ def apagar(menu, s):
         print('\nPara apagar um utilizador devera antes introduzir o id')
         iduser = input('Introduza o username: ')
         question = input('Deseja apagar o utilizador {0}?(y/n)'.format(iduser))
-        if question == 's':
+        if question == 'y':
             s.send(iduser.encode())
         else:
             pass

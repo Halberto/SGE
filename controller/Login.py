@@ -4,10 +4,7 @@ from controller.ControllerTable import ControllerTable
 
 
 from model.Usuarios import Usuarios
-from utils.TableData import TableExample
 
-from utils.configu import connect_args
-from model.DadosEstudantes import estudante
 
 
 class Login():
