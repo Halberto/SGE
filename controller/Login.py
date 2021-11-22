@@ -1,8 +1,7 @@
 import mysqlx
 
 from controller.ControllerTable import ControllerTable
-from controller.IntroduzirUsuarios import IntroduzirUsuarios
-from controller.LerUsuario import LerUsuarion
+
 
 from model.Usuarios import Usuarios
 from utils.TableData import TableExample
@@ -24,6 +23,7 @@ class Login():
                 print('User found', end='\n')
                 if password == usuario.password:
                     print('O usuario ',username , end=' entrou no sistema')
+                    users
                     return True
                     break
                 else:
